@@ -2,8 +2,7 @@ package class002;
 
 import java.util.Arrays;
 
-// 一开始有100个人，每个人都有100元
-// 在每一轮都做如下的事情 : 
+// 一开始有100个人，每个人都有100元。在每一轮都做如下的事情 : 
 // 每个人都必须拿出1元钱给除自己以外的其他人，给谁完全随机
 // 如果某个人在这一轮的钱数为0，那么他可以不给，但是可以接收
 // 发生很多很多轮之后，这100人的社会财富分布很均匀吗？
@@ -27,13 +26,16 @@ public class Experiment {
 		System.out.println("测试结束");
 	}
 
+	
 	// 完全按照说的来实验
 	public static void experiment(int n, int t) {
 		double[] wealth = new double[n];
 		Arrays.fill(wealth, 100);
 		boolean[] hasMoney = new boolean[n];
+		
 		for (int i = 0; i < t; i++) {
 			Arrays.fill(hasMoney, false);
+			
 			for (int j = 0; j < n; j++) {
 				if (wealth[j] > 0) {
 					hasMoney[j] = true;
@@ -54,6 +56,7 @@ public class Experiment {
 		}
 		Arrays.sort(wealth);
 		System.out.println("列出每个人的财富(贫穷到富有) : ");
+		
 		for (int i = 0; i < n; i++) {
 			System.out.print((int) wealth[i] + " ");
 			if (i % 10 == 9) {
