@@ -6,19 +6,18 @@ package class001;
 // 整个系列虽然都是java讲的，但使用不同语言的同学听懂思路之后，想理解代码真的不是问题
 // 语言问题并不是学习算法的障碍，有了人工智能工具之后，就更不是障碍了
 public class LanguageConversion {
-
 	class Solution {
-
 		public static int[] sortArray(int[] nums) {
 			if (nums.length > 1) {
 				mergeSort(nums);
 			}
 			return nums;
 		}
-
 		public static int MAXN = 50001;
 
-		// 以下是归并排序
+
+		
+		// 归并排序
 		public static int[] help = new int[MAXN];
 
 		public static void mergeSort(int[] arr) {
@@ -55,7 +54,14 @@ public class LanguageConversion {
 			}
 		}
 
-		// 以下是随机快速排序
+
+
+
+
+
+
+		
+		// 随机快速排序
 		public static void quickSort(int[] arr) {
 			sort(arr, 0, arr.length - 1);
 		}
@@ -97,7 +103,15 @@ public class LanguageConversion {
 			arr[j] = tmp;
 		}
 
-		// 以下是堆排序
+
+
+
+
+
+
+
+		
+		// 堆排序
 		public static void heapSort(int[] nums) {
 			int n = nums.length;
 			for (int i = n - 1; i >= 0; i--) {
